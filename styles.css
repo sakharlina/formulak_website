@@ -1,0 +1,3282 @@
+/********************
+   ГЛОБАЛЬНЫЕ СТИЛИ
+ ********************/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+ 
+html, body {
+    background-color: #001A44;
+    color: #ffffff;
+    font-family: "Montserrat", Arial, sans-serif;
+    margin-bottom: 0;
+    overflow-x: hidden;
+}
+ 
+button {
+    font-family: "Montserrat", Arial, sans-serif;
+}
+ 
+.button-callback {
+    border-width: 1px;
+    border-radius: 35px;
+    font-size: 24px;
+    padding: 10px 17px;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+}
+ 
+h2 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 64px;
+    margin: 0;
+}
+ 
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+ 
+.h2_title {
+    margin-top: 140px;
+}
+ 
+a {
+    text-decoration: none;
+    color: #ffffff;
+ }
+ 
+ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+input {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 24px;
+}
+
+input:focus {
+    outline-style: none;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input-form-elem {
+    min-width: 394px; min-height: 68px;
+    background-color: #EC184B;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    margin-top: 21px;
+    padding-left: 28px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.input-form-elem:focus {
+    border-width: 3px;
+}
+ 
+.input-form-elem::placeholder {
+    color:#ffffff;
+}
+
+.bread-crumb {
+    font-size: 24px;
+    color: #0A3674;
+    margin-top: 52px;
+}
+
+
+
+/********************
+      ШАПКА САЙТА
+ ********************/
+
+.header-menu {
+    display: inline-block;
+}
+
+#inline-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 36px;
+    padding-left: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 514px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.navigation a:hover {
+    text-decoration: underline 0.7px;
+}
+
+.navigation p {
+    margin: 0;
+}
+
+.header-menu-elem {
+    font-size: 24px;
+    position: relative;
+}
+
+.header-submenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #001A44;
+    list-style-type: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.header-menu-elem:hover .header-submenu {
+    display: flex;
+}
+
+#header-button-callback {
+    background-color: #001A44;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+#header-button-callback:hover {
+    background-color: #ffffff;
+    color: #001A44;
+}
+
+#header-button-callback:active {
+    background-color: #001A44;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.header-mobile-menu_button {
+    display: none;
+    background-color: #001A44;
+    border: none;
+}
+
+
+
+/********************
+       ПОДВАЛ
+ ********************/
+ 
+.footer {
+    width: 100%;
+    background-color: #0A3674;
+    margin-top: 134px;
+}
+
+#footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 83px;
+}
+
+.footer-politics {
+    align-items: flex-start;
+}
+
+.footer-politics-elem {
+    margin: 0px 0px;
+    font-size: 16px;
+}
+
+#politics-cookie {
+    margin-top: 20px;
+}
+
+#politics-copyright {
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-contacts-elem {
+    font-size: 32px;
+    margin-top: -1px;
+}
+
+#contacts-vk {
+    margin-top: 18px;
+}
+
+#contacts-tg {
+    margin-top: 14px;
+}
+
+.footer-picture {
+    background: transparent url(./images/footer-picture.png) bottom no-repeat;
+    background-size: contain;
+    width: 100%; height: 200px;
+    margin-top: 106px;
+}
+
+
+
+/********************
+    МОДАЛЬНОЕ ОКНО
+ ********************/
+
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #EC184B;
+    z-index: 20;
+}
+
+.modal-window-open {
+    display: block !important;
+}
+
+.modal-window .container {
+    position: relative;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-window-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh; margin-bottom: 5vh;
+    height: auto;
+}
+
+.modal-window .invitation-block_title {
+    margin-bottom: 2vh;
+}
+
+.modal-window__errors {
+    font-size: 24px;
+    color: #0A3674;
+    text-align: center;
+    margin: 0;
+}
+
+.input-form {
+    position: relative;
+    left: auto;
+    margin-top: 5vh;
+    align-self: center;
+}
+
+.modal-window__success-message {
+    display: none;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.modal-window__success-message-show {
+    display: block !important;
+}
+
+.modal-window_title {
+    font-size: 48px;
+}
+
+.modal-window_success-text {
+    margin: 1vh 0 0 0;
+}
+
+.button-close-window {
+    background: transparent url(./images/close.png) center no-repeat;
+    background-size: contain;
+    width: 95px; height: 10vh;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-window .input-form-elem {
+    font-size: 20px;
+    max-height: 50px;
+    margin-top: 10px;
+}
+
+#modal-button-callback {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #EC184B;
+    margin-top: 20px;
+}
+
+#modal-button-callback:hover {
+    background-color: #EC184B;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+#modal-button-callback:active {
+    background-color: #ffffff;
+    color: #EC184B;
+    border-color: #ffffff;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.modal-window-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 28px;
+    margin: 3vh 0 3vh 0;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/********************
+    МОБИЛЬНОЕ МЕНЮ
+ ********************/
+
+.mobile-menu-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 10;
+    overflow-y: hidden;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-menu-modal.modal-window-open {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-modal.modal-window-open .mobile-menu {
+    transform: translateX(0);
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7px);
+    z-index: 1;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 0; top: 0;
+    width: 100%;
+    background-color: #001A44;
+    z-index: 2;
+    padding: 15px 5px;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.mobile {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mobile-menu_navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    position: relative;
+    width: max-content;
+    min-width: 100%;
+}
+
+.mobile-menu_navigation a:hover {
+    text-decoration: underline 0.7px;
+}
+
+.mobile-menu_navigation p {
+    margin: 0;
+}
+
+.mobile-menu_navigation.submenu-active {
+    transform: translateX(-120px);
+}
+
+.mobile-menu_elem {
+    text-align: right;
+    padding-right: 20px;
+    position: relative;
+}
+
+.elem_uslugi {
+    cursor: pointer;
+}
+
+.mobile-submenu {
+    display: none;
+    position: absolute;
+}
+
+.mobile-submenu a:hover {
+    text-decoration: underline 0.7px;
+}
+
+.mobile-submenu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transform: translateX(-50px);
+}
+
+.mobile-header .button-close-window {
+    width: 50px;
+}
+
+.mobile-request-button {
+    font-size: 12px;
+    padding: 7px 10px;
+    background-color: #ffffff;
+    border-color: #001A44;
+    color: #001A44;
+    margin-top: 40px; margin-left: 15px;
+}
+
+.mobile-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px; margin-bottom: 15px;
+}
+
+.mobile-contacts a {
+    font-size: 10px;
+    color: #0A3674;
+}
+
+
+
+/******************************************************
+                  ГЛАВНАЯ СТРАНИЦА
+ ******************************************************/
+
+/********************
+    ГЛАВНЫЙ БЛОК
+ ********************/
+
+.main-block {
+    background-color: #0A3674;
+    width: 100%;
+    min-height: 2796px;
+    margin-top: 62px;
+    position: relative;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 2648px;
+    position: relative;
+}
+
+.main-block_title {
+    background: transparent url(./images/main-title.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 165px;
+    margin-top: 112px;
+}
+
+.image-of-red-car, 
+.image-of-yellow-car {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    will-change: transform;
+}
+
+.main-block_descript {
+    font-size: 64px;
+    margin-bottom: 70px;
+}
+
+
+
+/********************
+      БЛОК СКИДОК
+ ********************/
+
+.sale-block_subtitle {
+    font-size: 20px;
+    margin-top: 23px;
+    margin-bottom: 86px;
+}
+
+.sale-block-inline-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden !important;
+}
+
+.sale-block-inline-elem {
+    width: 420px;
+    color: #001A44;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 31px 30px 3px 40px;
+    word-wrap: break-word;
+}
+
+.sale-block-inline-elem_title {
+    font-size: 45px;
+    margin-top: 0;
+    margin-bottom: 39px;
+}
+
+.sale-block-inline-elem_text {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sale-block-inline-elem-descript {
+    font-size: 20px;
+    margin-top: 75px;
+    margin-bottom: 45px;
+}
+
+
+
+/********************
+      КАЛЕНДАРЬ
+ ********************/
+
+.inline-caption {
+    margin-top: 74px;
+    margin-bottom: 72px;
+    font-size: 32px;
+}
+
+.overflow-container {
+    margin-top: 74px;
+    width: 100%; max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.overflow-container table {
+    display: table;
+    width: auto;
+    max-width: 1300px;
+    max-height: 546px;
+    border-collapse: collapse;
+    align-items: center;
+}
+
+th .title {
+    font-size: 64px;
+    margin: 0;
+    text-align: center;
+    line-height: 52px;
+}
+
+th .descript {
+    font-size: 32px;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+tbody {
+    font-size: 22px;
+}
+
+thead tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+th, td {
+    border-left: 1px solid #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.no-border {
+    border-left: 1px solid #001A44;
+}
+
+
+
+/********************
+ ФОРМА ОБРАТНОЙ СВЯЗИ
+ ********************/
+
+.invitation-block {
+    background-color: #EC184B;
+    width: 100%;
+    min-height: 883px;
+    margin-top: 153px;
+    padding-top: 180px;
+}
+
+.invitation-block_title {
+    background: transparent url(./images/invitation-block-title.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 160px;
+    margin-bottom: 53px;
+}
+
+#input-button-callback {
+    border-width: 1px;
+    border-radius: 35px;
+    font-size: 24px;
+    padding: 10px 17px;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #EC184B;
+    margin-top: 20px;
+}
+
+#input-button-callback:hover {
+    background-color: #EC184B;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+#input-button-callback:active {
+    background-color: #ffffff;
+    color: #EC184B;
+    border-color: #ffffff;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.invitation-block-footnote {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+
+/********************
+       ОТЗЫВЫ
+ ********************/
+
+#feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-block_title {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 137px;
+}
+
+.rating-block {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    align-items: flex-end;
+    margin-top: 27px;
+}
+
+.rating-block p {
+    margin: 0;
+}
+
+.star-queue {
+    margin-top: 10px;
+    margin-bottom: 62px;
+}
+
+.feedback-of-people {
+    border-top: 0.5px solid #ffffff;
+    border-bottom: 0.5px solid #ffffff;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.feedback-of-people p {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.inline-feedback-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.star-queue-mini {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.feedback-date {
+    font-size: 20px;
+}
+
+#feedback-button-callback {
+    margin-top: 50px;
+    padding: 10px 30px;
+    background-color: #001A44;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+#feedback-button-callback:hover {
+    background-color: #ffffff;
+    color: #001A44;
+}
+
+#feedback-button-callback:active {
+    background-color: #001A44;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+
+
+/******************************************************
+                  СТРАНИЦА КАРТИНГА
+ ******************************************************/
+
+ /********************
+  ОСНОВНАЯ ИНФОРМАЦИЯ
+ ********************/
+
+.karting-info-block_title {
+    background: transparent url(images/main-title-karting.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 6vh;
+    margin-top: 15vh;
+}
+
+.karting-info-block_descript {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 0;
+}
+
+.cars-block {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    margin-top: 30vh;
+    margin-bottom: 17vh;
+}
+
+.cars-block_elem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vh;
+    font-size: 30px;
+    padding: 0 3vh;
+    position: relative;
+}
+
+.cars-block_elem:nth-child(even){
+    flex-direction: row-reverse;
+    transform: translateX(-23px);
+}
+
+.cars-block-elem_img {
+    object-fit: contain;
+}
+
+#cars-block-elem_info-reverse {
+    text-align: right;
+}
+
+.cars-block-elem_title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.cars-block-elem_descript {
+    margin: 1vh 0 0 0;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+#price-info_reverse {
+    justify-content: flex-end;
+}
+
+.price-info_elem {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-top: 7vh;
+}
+
+.price-info_elem p {
+    margin: 0;
+    text-align: center;
+}
+
+.fare {
+    border: 0.5px solid #ffffff;
+    font-size: 24px;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.clarification {
+    font-size: 20px;
+    margin: 7vh 0 0 0;
+}
+
+#clarification_non-standart {
+    transform: translateX(-130px);
+}
+
+#registration-button-callback {
+    background-color: #ffffff;
+    color: #001A44;
+    font-size: 36px;
+    display: flex;
+    margin: 0 auto;
+}
+
+#registration-button-callback:hover {
+    background-color: #001A44;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+#registration-button-callback:active {
+    background-color: #ffffff;
+    color: #001A44;
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+
+
+/********************
+       ВОПРОСЫ
+ ********************/
+
+.FAQ-block {
+    margin-top: 20vh;
+}
+
+.FAQ-block_elem {
+    padding: 30px 65px;
+    border-block: 0.5px solid #ffffff;
+}
+
+details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 36px;
+    list-style: none;
+    cursor: pointer;
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 3vw;
+        height: 3vw;
+        background: url(./images/more.png) center no-repeat;
+        background-size: contain;
+        transition: all 0.5s ease;
+    }
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary::after {
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+details {
+    interpolate-size: allow-keywords;
+    
+    &::details-content {
+      transition:
+        block-size 0.5s,
+        content-visibility 0.5s allow-discrete;
+      overflow: hidden;
+      block-size: 0;
+    }
+    
+    &[open]::details-content {
+      block-size: auto;
+    }
+  }
+
+details p {
+    font-size: 24px;
+    margin-block-start: 5vh;
+    margin-block-end: 0;
+    transition: all 0.5s ease;
+}
+
+
+
+/******************************************************
+                  СТРАНИЦА ШКОЛЫ
+ ******************************************************/
+
+ /********************
+      ИНФОРМАЦИЯ
+ ********************/
+
+.school-info-block_title {
+    background: transparent url(./images/main-title-school.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 6vh;
+    margin-top: 15vh;
+}
+
+.school-info-block_discript {
+    font-size: 32px;
+    text-align: center;
+    margin: 3vh 0 0 0;
+}
+
+.school-info-block {
+    font-size: 32px;
+}
+
+
+/********************
+        ЦЕНЫ
+ ********************/
+
+.types-of-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    font-size: 32px;
+}
+
+.types-of-groups_descript {
+    margin: 25vh 0 0 0;
+}
+
+.karting-groups_elem {
+    min-width: 85vw;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #001A44;
+    border-radius: 10px;
+    padding: 10vh 7vw;
+}
+
+.karting-groups-elem_title {
+    font-size: 45px;
+    margin: 0 0 3vh 0;
+}
+
+.karting-groups-elem_descript {
+    font-size: 26px;
+    margin: 0;
+}
+
+.price-info-school {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 13vh;
+}
+
+.price-info-block {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+.price-info_elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-info_elem p {
+    margin: 2vh 0 0 0;
+}
+
+.fare-school {
+    border: 2px solid #001A44;
+    font-size: 24px;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.groups-button-callback {
+    background-color: #001A44;
+    color: #ffffff;
+    font-size: 32px;
+    align-self: center;
+}
+
+.groups-button-callback:hover {
+    background-color: #ffffff;
+    color: #001A44;
+    border-color: #001A44;
+}
+
+
+
+/******************************************************
+               СТРАНИЦА СБОРКИ КАРТОВ
+ ******************************************************/
+
+/********************
+      ИНФОРМАЦИЯ
+ ********************/
+
+.custom-kart-info-block_title {
+    background: transparent url(./images/main-title-custom-kart.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 6vh;
+    margin-top: 15vh;
+}
+
+.custom-kart-info-block_descript {
+    font-size: 32px;
+    margin: 15vh 0 0 0;
+}
+
+.link-callback {
+    display: inline-block;
+    font-size: 32px !important;
+    padding: 0 !important;
+    color: #FFCA00;
+    cursor: pointer;
+}
+
+.custom-kart-calculator_descript {
+    font-size: 32px;
+    margin-top: 17vh;
+    margin-bottom: 10vh;
+}
+
+
+
+ /********************
+      КАЛЬКУЛЯТОР
+ ********************/
+
+.calculator-block_elem {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.calculator-block-elem_img {
+    object-fit: contain;
+    min-width: 40vw; height: 70vh;
+    align-self: center;
+}
+
+.calculator-block-elem_info {
+    width: 486px; height: 598px;
+    background-color: #0A3674;
+    border-radius: 10px;
+    padding: 34px 63px;
+    position: relative;
+}
+
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0.5 !important;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    transform: translateX(2750%);
+}
+
+.swiper-button-next {
+    position: absolute;
+    transform: translateX(-300%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #FFCA00;
+}
+
+.pagination_description {
+    font-size: 20px;
+    color: #001A44;
+    margin-top: 0; 
+    margin-bottom: 1vh;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.pagination-elem {
+    width: 60px; height: 10px;
+    background-color: #001A44;
+}
+
+.pagination-elem_active {
+    width: 60px; height: 10px;
+    background-color: #0A3674 !important;
+    border: 1px solid #FFCA00 !important;
+}
+
+.calculator-block-elem_title {
+    font-size: 32px;
+    color: #001A44;
+}
+
+.calculator-block-elem_options {
+	display: flex;
+    flex-direction: column;
+	gap: 20px;
+}
+
+.calculator-block-elem_options input[type="radio"] {
+	display: none;
+}
+
+.custom-radio-card {
+	cursor: pointer;
+    width: 361px; height: 117px;
+    background-color: #001A44;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 15px 5px 15px 15px;
+}
+
+.item_non-standart-18 {
+    font-size: 18px;
+}
+
+.item_non-standart-16 {
+    font-size: 16px;
+}
+
+.custom-radio-card:hover {
+	box-shadow: 1.5px 1.5px 2px 0.1px #FFCA00;
+}
+
+.custom-radio-button:checked + .custom-radio-card {
+	box-shadow: 1.5px 1.5px 2px 0.1px #FFCA00;
+}
+
+.calculator-block-elem_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.finished-kart_title {
+    font-size: 49px;
+    color: #001A44;
+    margin: 0;
+    text-align: center;
+}
+
+.finished-kart_info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1vh;
+    font-size: 24px;
+}
+
+.finished-kart_info p {
+    margin: 0;
+}
+
+.finished-kart_price {
+    font-size: 48px;
+    color: #FFCA00;
+    text-align: center;
+    font-weight: bold;
+}
+
+.clоse-finished-slide {
+    background: transparent url(./images/close.png) center no-repeat;
+    background-size: contain;
+    width: 35px; height: 30px;
+    align-self: flex-end;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+/******************************************************
+                 СТРАНИЦА О КОМПАНИИ
+ ******************************************************/
+
+/********************
+  ГЛАВНАЯ ИНФОРМАЦИЯ
+ ********************/
+
+.main-info-block_title {
+    background: transparent url(./images/main-title-about-us.png) center no-repeat;
+    background-size: contain;
+    width: 100%; height: 6vh;
+    margin-top: 20vh;
+}
+
+.main-info-block_descript {
+    font-size: 32px;
+    margin-top: 106px;
+    margin-bottom: 0;
+}
+
+
+
+/********************
+       ЦИТАТА
+ ********************/
+
+.quote-block {
+    width: 100%; min-height: 35vh;
+    background-color: #EC184B;
+    margin-top: 23vh;
+    padding: 30vh 30vh; 
+}
+
+.quote {
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+/********************
+       ТРЕНЕРЫ
+ ********************/
+
+.our-trainers-block {
+    margin-top: 22vh;
+}
+
+.our-trainers-block_title {
+    font-size: 45px;
+    margin: 0;
+    text-align: center;
+}
+
+.trainers-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    margin-top: 17vh;
+}
+
+.trainers-list > .trainers-list_elem + .trainers-list_elem {
+    border-left: 0.5px solid #ffffff;
+}
+
+.trainers-list_elem {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    max-width: 434px; min-width: 202px;
+    text-align: center;
+    font-size: 24px;
+    padding: 14px 22px 2px 22px;
+}
+
+.trainers-list_elem img {
+    order: -1; 
+    object-fit: contain;
+    width: 150px !important; height: 150px !important;
+    align-self: center;
+}
+
+.trainers-list_elem p {
+    margin: 0;
+}
+
+.trainers-name {
+    font-size: 36px;
+}
+
+
+
+/********************
+       ТРАССЫ
+ ********************/
+
+.our-track-block {
+    margin-top: 22vh;
+}
+
+.our-track-block_title {
+    font-size: 45px;
+    margin: 0;
+    text-align: center;
+}
+
+.our-track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 91px;
+    margin-top: 17vh;
+}
+
+.our-track-list_elem {
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    font-size: 32px;
+    align-items: center;
+}
+
+.our-track-list_elem:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+
+
+/******************************************************
+                 СТРАНИЦА КОНТАКТЫ
+ ******************************************************/
+
+ /********************
+   КОНТАКТЫ и КАРТА
+ ********************/
+
+.container-contacts {
+    margin-top: 55px;
+    background-color: #0A3674;
+    width: 100%; height: 765px;
+}
+
+.contacts-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 45px 0;
+}
+
+.contacts-block_info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 45px;
+    padding-left: 60px;
+}
+
+.contacts-block_info-48 {
+    font-size: 48px;
+}
+
+.contacts-block_info-40 {
+    font-size: 40px;
+}
+
+.map {
+    border-radius: 35px;
+    position: relative;
+}
+
+.location-info {
+    background-color: #001A44;
+    border-radius: 30px;
+    width: 472px;
+    padding: 18px 28px;
+    position: absolute;
+    transform: translateX(36px) translateY(-180px);
+}
+
+.location-info_city {
+    background-color: #FFCA00;
+    color: #001A44;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 4px 27px;
+    justify-self: flex-start;
+}
+
+.location-info_address {
+    font-size: 24px;
+    margin-top: 23px;
+    margin-bottom: 0;
+}
+
+.location-info_chart {
+    font-size: 16px;
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+
+
+/******************************************************
+                    СТРАНИЦА ОШИБКИ
+ ******************************************************/
+
+.error-404 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 64px;
+    margin-top: 12%;
+}
+
+.error-404 img {
+    align-self: center;
+}
+
+.button-back {
+    display: flex;
+    background-color: #ffffff;
+    font-size: 24px;
+    padding: 10px 18px;
+    border-radius: 35px;
+    justify-self: center;
+}
+
+.button-back a {
+    color: #001A44 !important;
+}
+
+
+
+/******************************************************
+                   АДАПТИВНЫЕ СТИЛИ
+ ******************************************************/
+
+@media screen and (max-width: 1286px) {
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem {
+        min-width: 400px;
+        padding: 29px 28px 3px 38px;
+    }
+
+    .sale-block-inline-elem_title {
+        font-size: 44px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 31px;
+    }
+
+    .sale-block-inline-elem-descript {
+        font-size: 19px;
+    }
+
+    th, td {
+        padding: 15px 5px;
+    }
+
+    th .title {
+        font-size: 62px;
+    }
+
+    th .descript {
+        font-size: 30px;
+    }
+
+    tbody {
+        font-size: 20px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .karting-info-block_descript {
+        font-size: 30px;
+    }
+
+    .cars-block-elem_title {
+        font-size: 38px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 28px;
+    }
+
+    .clarification {
+        font-size: 18px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .school-info-block_discript {
+        font-size: 30px;
+    }
+
+    .types-of-groups_descript {
+        font-size: 30px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .swiper-button-prev {
+        transform: translateX(2590%);
+    }
+
+    .swiper-button-next {
+        transform: translateX(-250%);
+    }
+
+    /* СТРАНИЦА ОШИБКИ */
+    .error-404 {
+        font-size: 56px;
+        margin-top: 20%;
+    }
+
+    .error-404 img {
+        width: 200px;
+    }
+
+    .button-back {
+        font-size: 22px;
+        padding: 10px 18px;
+    }
+}
+
+@media screen and (max-width: 1272px) {
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem {
+        min-width: 380px;
+    }
+
+    .sale-block-inline-elem_title {
+        font-size: 43px;
+        margin-bottom: 35px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 29px;
+    }
+
+    .sale-block-inline-elem-descript {
+        font-size: 18px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .cars-block-elem_title {
+        font-size: 36px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 26px;
+    }
+
+    .clarification {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1262px) {
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .custom-kart-info-block_descript {
+        font-size: 28px;
+    }
+
+    .custom-kart-calculator_descript {
+        font-size: 28px;
+    }
+
+    .swiper-button-prev {
+        transform: translateX(2520%);
+    }
+
+    .swiper-button-next {
+        transform: translateX(-200%);
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem {
+        min-width: 360px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 28px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .fare {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+
+    .price-info_elem p {
+        font-size: 30px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .swiper-button-prev {
+        transform: translateX(2450%);
+    }
+
+    .swiper-button-next {
+        transform: translateX(-150%);
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .main-info-block_descript {
+        font-size: 28px;
+    }
+
+    .quote {
+        font-size: 42px;
+    }
+
+    .our-trainers-block_title,
+    .our-track-block_title {
+        font-size: 41px;
+    }
+
+    .trainers-list_elem {
+        font-size: 20px;
+    }
+
+    .our-track-list_elem {
+        font-size: 24px;
+    }
+
+    .our-track-list_elem img {
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 1197px) {
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem_text {
+        font-size: 28px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .cars-block-elem_title {
+        font-size: 34px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 24px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .swiper-button-prev {
+        transform: translateX(2400%);
+    }
+
+    .swiper-button-next {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem_text {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    /* ШАПКА */
+    .header-menu-elem {
+        font-size: 20px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .sale-block-inline-elem {
+        min-width: 350px;
+    }
+
+    .sale-block-inline-elem_title {
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 27px;
+    }
+
+    .sale-block-inline-elem-descript {
+        font-size: 16px;
+    }
+
+    th .title {
+        font-size: 60px;
+    }
+
+    th .descript {
+        font-size: 28px;
+    }
+
+    tbody {
+        font-size: 18px;
+    }
+
+    th, td {
+        min-width: 160px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .karting-info-block_descript {
+        font-size: 28px;
+    }
+
+    .cars-block-elem_title {
+        font-size: 30px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 22px;
+    }
+
+    .fare {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .price-info_elem p {
+        font-size: 28px;
+    }
+
+    .clarification {
+        font-size: 16px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .swiper-button-prev {
+        transform: translateX(2350%);
+    }
+
+    .swiper-button-next {
+        transform: translateX(-30%);
+    }
+
+    /* СТРАНИЦА КОНТАКТЫ */
+    .container-contacts {
+        height: 665px;
+    }
+
+    .contacts-block_info-48 {
+        font-size: 40px;
+    }
+
+    .contacts-block_info-40 {
+        font-size: 32px;
+    }
+
+    .map {
+        width: 450px; height: 550px;
+    }
+
+    .location-info {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    /* СТРАНИЦА КАРТИНГА */
+    .cars-block_elem {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 auto;
+        max-width: 70vw;
+        padding: 0;
+    }
+
+    .cars-block_elem:nth-child(even) {
+        flex-direction: column;
+        transform: translateX(0);
+        align-items: flex-start;
+    }
+
+    #cars-block-elem_info-reverse {
+        text-align: left;
+    }
+
+    #price-info_reverse {
+        justify-content: flex-start;
+    }
+
+    #clarification_non-standart {
+        transform: translateX(0);
+    }
+
+    details summary {
+        font-size: 32px;
+    }
+
+    details p {
+        font-size: 20px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .custom-kart-info-block_descript {
+        font-size: 24px;
+    }
+
+    .custom-kart-calculator_descript {
+        font-size: 24px;
+    }
+
+    .calculator-block_elem {
+        flex-direction: column !important;
+    }
+
+    .swiper-button-next, 
+    .swiper-button-prev { 
+        display: none !important; 
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    /* ШАПКА */
+    .logo {
+        width: 200px;
+    }
+
+    .navigation {
+        min-width: 500px;
+    }
+
+    .header-menu-elem {
+        font-size: 18px;
+    }
+
+    .header-submenu {
+        gap: 7px;
+        padding: 15px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .bread-crumb {
+        font-size: 20px;
+    }
+
+    .school-info-block_discript {
+        font-size: 26px;
+    }
+
+    .types-of-groups_descript {
+        font-size: 26px;
+    }
+
+    .karting-groups-elem_title {
+        font-size: 40px;
+    }
+
+    .karting-groups-elem_descript {
+        font-size: 20px;
+    }
+
+    .groups-button-callback {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* ШАПКА */
+    .logo {
+        width: 160px;
+    }
+
+     /* ПОДВАЛ */
+    .footer-contacts-elem {
+        font-size: 30px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block {
+        min-height: 2750px;
+    }
+
+    #main-container {
+        min-height: 2550px;
+    }
+
+    .image-of-red-car, 
+    .image-of-yellow-car {
+        width: 340px;
+    }
+
+    .main-block_descript {
+        font-size: 52px;
+    }
+
+    .h2_title {
+        font-size: 52px;
+    }
+
+    .feedback-block_title {
+        font-size: 42px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .bread-crumb {
+        font-size: 18px;
+    }
+
+    .karting-info-block_descript {
+        font-size: 24px;
+    }
+
+    #registration-button-callback {
+        font-size: 30px;
+        padding: 5px 10px;
+    }
+
+    details summary {
+        font-size: 28px;
+    }
+
+    details p {
+        font-size: 16px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .school-info-block_discript {
+        font-size: 22px;
+    }
+
+    .types-of-groups_descript {
+        font-size: 22px;
+    }
+
+    .karting-groups-elem_title {
+        font-size: 36px;
+    }
+
+    .karting-groups-elem_descript {
+        font-size: 16px;
+    }
+
+    .fare-school {
+        font-size: 20px;
+        padding: 5px 10px
+    }
+
+    .groups-button-callback {
+        font-size: 24px;
+        padding: 7px 12px;
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .main-info-block_descript {
+        font-size: 24px;
+    }
+
+    .quote-block {
+        padding: 20vh 15vh;
+    }
+
+    .quote {
+        font-size: 38px;
+    }
+
+    .our-trainers-block_title,
+    .our-track-block_title {
+        font-size: 38px;
+    }
+
+    .trainers-list_elem {
+        font-size: 18px;
+    }
+
+    .our-track-list_elem {
+        font-size: 20px;
+    }
+
+    .our-track-list_elem img {
+        max-width: 450px;
+    }
+
+    /* СТРАНИЦА КОНТАКТЫ */
+    .container-contacts,
+    .contacts-block {
+        height: 80vh;
+    }
+
+    .contacts-block {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .contacts-block_info {
+        display: none;
+    }
+
+    .map {
+        width: 100vw !important; 
+        height: 100% !important;
+        border-radius: 0;
+    }
+
+    .location-info {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    /* ШАПКА */
+    .logo {
+        width: 130px;
+    }
+
+    /* ПОДВАЛ */
+    .footer-contacts-elem {
+        font-size: 28px;
+    }
+
+    .footer-picture {
+        margin-top: 80px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .image-of-red-car, 
+    .image-of-yellow-car {
+        width: 340px;
+    }
+
+    .main-block_descript {
+        font-size: 50px;
+    }
+
+    .h2_title {
+        font-size: 50px;
+    }
+
+    th .title {
+        font-size: 58px;
+    }
+
+    th .descript {
+        font-size: 27px;
+    }
+
+    tbody {
+        font-size: 17px;
+    }
+
+    .feedback-block_title {
+        font-size: 40px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .cars-block-elem_img {
+        max-width: 70vw;
+    }
+
+    details summary {
+        font-size: 24px;
+    }
+
+    details p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    /* ШАПКА */
+    .logo {
+        width: 95px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    #header-button-callback {
+        display: none;
+    }
+
+    .header-mobile-menu_button {
+        display: inline-block;
+    }
+
+    /* ПОДВАЛ */
+    .footer-contacts-elem {
+        font-size: 25px;
+    }
+
+    .footer-picture {
+        margin-top: 50px;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-logo {
+        width: 200px;
+    }
+    
+    .button-close-window {
+        width: 80px;
+    }
+
+    .modal-window__errors {
+        font-size: 22px;
+    }
+
+    .modal-window-contacts {
+        font-size: 24px;
+    }
+    
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .image-of-red-car, 
+    .image-of-yellow-car {
+        width: 300px;
+    }
+
+    .sale-block-inline-elem {
+        min-width: 320px;
+    }
+
+    .sale-block-inline-elem_title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 25px;
+    }
+
+    .sale-block-inline-elem-descript {
+        font-size: 14px;
+    }
+
+    .feedback-block_title {
+        font-size: 40px;
+    }
+
+    .rating-block {
+        font-size: 35px;
+    }
+
+    .feedback-of-people {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    /* ПОДВАЛ */
+    .footer-politics-elem {
+        font-size: 13px;
+    }
+
+    .footer-contacts-elem {
+        font-size: 20px;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-logo {
+        width: 180px;
+    }
+    
+    .button-close-window {
+        width: 70px;
+    }
+
+    .modal-window__errors {
+        font-size: 20px;
+    }
+
+    .modal-window_title {
+        font-size: 46px;
+    }
+
+    .modal-window_success-text {
+        font-size: 38px;
+    }
+
+    .modal-window-contacts {
+        font-size: 20px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block {
+        min-height: 2770px;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    #main-container {
+        min-height: 2648px;
+    }
+
+    .main-block_title {
+        margin-top: 70px;
+    }
+    
+    .h2_title {
+        font-size: 48px;
+    }
+
+    .main-block_descript {
+        font-size: 48px;
+    }
+
+    .invitation-block {
+        min-height: 730px;
+        margin-top: 120px;
+        padding-top: 90px;
+    }
+
+    th .title {
+        font-size: 56px;
+    }
+
+    th .descript {
+        font-size: 24px;
+    }
+
+    tbody {
+        font-size: 16px;
+    }
+
+    .feedback-block_title {
+        font-size: 38px;
+    }
+
+    .rating-block {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .inline-caption {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .feedback-date {
+        font-size: 14px;
+    }
+
+    .feedback-of-people p {
+        font-size: 16px;
+    }
+
+    #feedback-button-callback {
+        font-size: 14px;
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .karting-info-block_descript {
+        font-size: 18px;
+    }
+
+    .FAQ-block_elem {
+        padding: 15px 35px;
+    }
+
+    details summary {
+        font-size: 20px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .fare-school {
+        font-size: 18px;
+        padding: 5px 10px
+    }
+
+    .price-info_elem p {
+        font-size: 24px;
+    }
+
+    .price-info-school {
+        flex-direction: column;
+    }
+    
+    .groups-button-callback {
+        margin-top: 10vh;
+        width: auto;
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .main-info-block_descript {
+        font-size: 20px;
+    }
+
+    .quote-block {
+        margin-top: 70px;
+    }
+
+    .quote {
+        font-size: 32px;
+    }
+
+    .our-trainers-block,
+    .our-track-block {
+        margin-top: 50px;
+    }
+
+    .trainers-list,
+    .our-track-list {
+        margin-top: 50px;
+    }
+
+    .our-trainers-block_title,
+    .our-track-block_title {
+        font-size: 32px;
+    }
+
+    .trainers-list_elem {
+        gap: 3vh;
+        padding: 10px;
+    }
+
+    .trainers-list_elem img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .trainers-name {
+        font-size: 18px;
+    }
+
+    .trainers-list_elem {
+        font-size: 14px;
+    }
+
+    .our-track-list_elem {
+        font-size: 16px;
+        gap: 5vw;
+    }
+
+    .our-track-list_elem img {
+        max-width: 400px;
+    }
+
+    /* СТРАНИЦА ОШИБКИ */
+    .error-404 {
+        font-size: 48px;
+        margin-top: 30%;
+    }
+
+    .error-404 img {
+        width: 160px;
+    }
+
+    .button-back {
+        font-size: 20px;
+        padding: 7px 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .custom-kart-info-block_descript, 
+    .link-callback {
+        font-size: 20px !important;
+    }
+
+    .custom-kart-calculator_descript {
+        font-size: 20px;
+    }
+
+    .calculator-block-elem_img {
+        width: 450px; height: 450px;
+    }
+
+    /* СТРАНИЦА КОНТАКТЫ */
+
+    .location-info {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    /* СТРАНИЦА О КОМПАНИИ */
+    .quote {
+        font-size: 28px;
+    }
+
+    .our-track-list_elem {
+        font-size: 14px;
+        gap: 3vw;
+    }
+
+    .our-track-list_elem img {
+        max-width: 350px;
+    }
+
+    /* СТРАНИЦА ОШИБКИ */
+    .error-404 {
+        font-size: 40px;
+        margin-top: 40%;
+    }
+
+    .error-404 img {
+        width: 140px;
+    }
+
+    .button-back {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* ПОДВАЛ */
+    .footer-contacts-elem {
+        font-size: 14px;
+    }
+
+    .footer-politics-elem {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    #politics-copyright {
+        font-size: 14px;
+    }
+
+    .footer-picture {
+        margin-top: 35px;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-logo {
+        width: 160px;
+    }
+    
+    .button-close-window {
+        width: 60px;
+    }
+
+    .modal-window__errors {
+        font-size: 18px;
+    }
+
+    .modal-window_title {
+        font-size: 40px;
+    }
+
+    .modal-window_success-text {
+        font-size: 32px;
+    }
+
+    .modal-window-contacts {
+        font-size: 16px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block_descript {
+        font-size: 40px;
+    }
+    
+    .h2_title {
+        font-size: 40px;
+    }
+
+    .input-form-elem {
+        min-width: 180px; min-height: 50px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    #modal-button-callback {
+        font-size: 15px;
+        padding: 10px 5px;
+        margin-top: 10px;
+    }
+
+    .feedback-block_title {
+        font-size: 30px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .bread-crumb {
+        font-size: 14px;
+    }
+
+    .karting-info-block_descript {
+        font-size: 16px;
+    }
+
+    .cars-block-elem_title {
+        font-size: 26px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 20px;
+    }
+
+    .fare {
+        font-size: 16px;
+    }
+
+    .price-info_elem p {
+        font-size: 20px;
+    }
+
+    .clarification {
+        font-size: 12px;
+    }
+
+    #registration-button-callback {
+        font-size: 26px;
+    }
+
+    details summary {
+        font-size: 18px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .karting-groups-elem_title {
+        font-size: 32px;
+    }
+
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .custom-kart-info-block_title {
+        height: 23px;
+        margin-top: 50px;
+    }
+
+    .custom-kart-info-block_descript, 
+    .link-callback {
+        font-size: 16px !important;
+    }
+
+    .custom-kart-info-block_descript {
+        margin-top: 100px;
+    }
+
+    .custom-kart-calculator_descript {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    .calculator-block-elem_img {
+        width: 400px; height: 400px;
+    }
+
+    .calculator-block-elem_info {
+        width: 400px; max-height: 500px;
+        padding: 20px 40px;
+    }
+
+    .pagination_description {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .calculator-block-elem_title {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .custom-radio-card {
+        font-size: 12px;
+        width: 320px; height: 100px;
+    }
+
+    .item_non-standart-18 {
+        font-size: 14px;
+    }
+
+    .item_non-standart-16 {
+        font-size: 13px;
+    }
+
+    .finished-kart_title,
+    .finished-kart_price {
+        font-size: 35px;
+    }
+
+    .finished-kart_info {
+        font-size: 18px;
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .trainers-list {
+         display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        margin-left: 0;
+    }
+    
+    .our-track-list_elem {
+        flex-direction: column;
+        font-size: 16px;
+        gap: 5vw;
+        padding: 0 50px;
+    }
+
+    .our-track-list_elem:nth-child(even) {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* СТРАНИЦА ОШИБКИ */
+    .error-404 {
+        font-size: 40px;
+        margin-top: 50%;
+    }
+
+    .error-404 img {
+        width: 150px;
+    }
+
+    .button-back {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    /* ПОДВАЛ */
+    .footer-picture {
+        margin-top: 20px;
+        height: 100px;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-window__errors {
+        font-size: 16px;
+    }
+
+    .modal-window_title {
+        font-size: 36px;
+    }
+
+    .modal-window_success-text {
+        font-size: 28px;
+    }
+
+    .modal-window-contacts {
+        font-size: 14px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block_descript {
+        font-size: 35px;
+    }
+
+    .h2_title {
+        font-size: 35px;
+    }
+
+    .footer-politics-elem {
+        font-size: 13px;
+        max-width: 250px;
+    }
+
+    #politics-copyright {
+        font-size: 13px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .bread-crumb {
+        font-size: 12px;
+    }
+
+    .karting-info-block_descript {
+        font-size: 14px;
+    }
+
+    .cars-block-elem_title {
+        font-size: 20px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 16px;
+    }
+
+    .fare {
+        font-size: 12px;
+    }
+
+    .price-info_elem p {
+        font-size: 16px;
+    }
+
+    details summary {
+        font-size: 16px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .fare-school {
+        font-size: 16px;
+        padding: 5px 7px
+    }
+
+    .price-info_elem p {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* СТРАНИЦА СБОРКИ КАРТОВ */
+    .custom-kart-info-block_descript, 
+    .link-callback {
+        font-size: 14px !important;
+    }
+
+    .custom-kart-info-block_descript {
+        margin-top: 40px;
+    }
+
+    .custom-kart-calculator_descript {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .calculator-block-elem_img {
+        width: 300px; height: 300px;
+    }
+
+    .calculator-block-elem_info {
+        width: 290px; max-height: 350px;
+        padding: 20px 20px;
+    }
+
+    .calculator-block-elem_options {
+        gap: 10px;
+    }
+
+    .pagination-elem,
+    .pagination-elem_active {
+        width: 42px !important; height: 5px !important;
+    }
+
+    .calculator-block-elem_title {
+        font-size: 14px;
+    }
+
+    .custom-radio-card {
+        font-size: 10px;
+        width: 250px; height: 80px;
+        padding: 9px 9px;
+    }
+
+    .item_non-standart-18 {
+        font-size: 12px;
+    }
+
+    .finished-kart_title,
+    .finished-kart_price {
+        font-size: 24px;
+    }
+
+    .finished-kart_info {
+        font-size: 15px;
+    }
+
+    .clоse-finished-slide {
+        width: 25px; height: 20px;
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .main-info-block_title {
+        height: 27px;
+        margin-top: 50px;
+    }
+
+    .main-info-block_descript {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .quote-block {
+        margin-top: 59px;
+        padding: 90px 30px;
+    }
+
+    .quote {
+        font-size: 16px;
+    }
+
+    .our-trainers-block_title,
+    .our-track-block_title {
+        font-size: 20px;
+    }
+
+    .trainers-list_elem {
+        gap: 10px;
+    }
+
+    .trainers-list_elem img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .trainers-name {
+        font-size: 16px;
+    }
+
+    .our-track-list {
+        gap: 50px;
+    }
+
+    .our-track-list_elem {
+        font-size: 14px;
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .our-track-list_elem img {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-window__errors {
+        font-size: 14px;
+    }
+
+    .modal-window_title {
+        font-size: 32px;
+    }
+
+    .modal-window_success-text {
+        font-size: 20px;
+    }
+
+    .modal-window-contacts {
+        font-size: 12px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block_descript {
+        font-size: 26px;
+    }
+
+    .h2_title {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* ПОДВАЛ */
+    .footer {
+        margin-top: 46px;
+    }
+
+    #footer-container {
+        padding-top: 10px;
+    }
+
+    .footer-politics-elem {
+        font-size: 8px;
+    }
+
+    .footer-contacts-elem {
+        font-size: 12px;
+    }
+
+    /* МОДАЛЬНОЕ ОКНО */
+    .modal-logo {
+        width: 90px;
+    }
+
+    .button-close-window {
+        width: 51px;
+    } 
+
+    .modal-window__errors {
+        font-size: 14px;
+    }
+
+    .modal-window .input-form-elem {
+        min-width: 160px; min-height: 28px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .modal-window_title {
+        font-size: 20px;
+    }
+
+    .modal-window_success-text {
+        font-size: 14px;
+    }
+
+    .modal-window-contacts {
+        font-size: 10px;
+    }
+
+    /* ГЛАВНАЯ СТРАНИЦА */
+    .main-block {
+        margin-top: 20px;
+        min-height: 1150px;
+    }
+
+    #main-container {
+        min-height: 1100px;
+    }
+
+    .main-block_title {
+        margin-top: 14px;
+    }
+
+    .main-block_descript {
+        font-size: 24px;
+        margin-bottom: 7px;
+    }
+
+    .h2_title {
+        font-size: 20px;
+        margin-top: 34px;
+    }
+
+    .sale-block_subtitle {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+
+    .sale-block-inline-items {
+        margin-top: 36px;
+        gap: 18px;
+    }
+
+    .sale-block-inline-elem {
+        min-width: 135px; max-height: 160px;
+        padding: 6px 9px 8px 9px;
+        border-radius: 2px;
+    }
+
+    .sale-block-inline-elem_title {
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    .sale-block-inline-elem_text {
+        font-size: 12px;
+    }
+
+    .sale-block-inline-elem-descript {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .inline-caption {
+        font-size: 10px;
+    }
+
+    th .title {
+        font-size: 40px;
+    }
+
+    th .descript {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    tbody {
+        font-size: 14px;
+    }
+
+    th, td {
+        min-width: 115px;
+    }
+
+    .invitation-block {
+        min-height: 338px;
+        margin-top: 93px;
+    }
+
+    .invitation-block_title {
+        width: 100%; height: 50px;
+        margin-bottom: 31px;
+    }
+
+    .input-form-elem {
+        min-width: 160px; min-height: 28px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    #modal-button-callback {
+        font-size: 12px;
+        padding: 3px 13px;
+        margin-top: 11px;
+    }
+
+    .invitation-block-footnote {
+        font-size: 7px;
+        margin-bottom: 78px;
+    }
+
+    .feedback-block_title {
+        font-size: 14px;
+        margin-top: 33px;
+        margin-bottom: 0;
+    }
+
+    .rating-block {
+        font-size: 14px;
+        margin-top: 23px;
+    }
+
+    .star-queue {
+        margin-bottom: 24px;
+    }
+
+    .star-queue img {
+        width: 15px;
+    }
+
+    .feedback-of-people p {
+        font-size: 14px;
+    }
+
+    .star-queue-mini img {
+        width: 15px;
+    }
+
+    .inline-feedback-block .feedback-date {
+        font-size: 10px;
+    }
+
+    #feedback-button-callback {
+        margin-top: 13px;
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+
+    /* СТРАНИЦА КАРТИНГА */
+    .bread-crumb {
+        font-size: 8px;
+    }
+
+    .karting-info-block_title {
+        height: 24px;
+        margin-top: 29px;
+    }
+
+    .cars-block {
+        margin-top: 90px; margin-bottom: 35px;
+        gap: 70px;
+    }
+
+    .cars-block-elem_title {
+        font-size: 16px;
+    }
+
+    .cars-block-elem_descript {
+        font-size: 14px;
+    }
+
+    .price-info_elem {
+        margin-top: 12px;
+        gap: 2px;
+    }
+
+    .fare {
+        font-size: 12px;
+        padding: 1px 9px;
+    }
+
+    .price-info_elem p {
+        font-size: 13px;
+    }
+
+    .clarification {
+        margin-top: 10px;
+    }
+
+    #registration-button-callback {
+        font-size: 14px;
+        padding: 4px 7px;
+    }
+
+    .FAQ-block {
+        margin-top: 55px;
+    }
+
+    details summary {
+        font-size: 16px;
+    }
+
+    details p {
+        margin-top: 15px;
+    }
+
+    /* СТРАНИЦА ШКОЛЫ */
+    .school-info-block_title {
+        height: 24px;
+        margin-top: 30px;
+    }
+
+    .school-info-block_discript {
+        font-size: 13px;
+        margin-top: 14px;
+    }
+
+    .types-of-groups_descript {
+        font-size: 14px;
+        margin-top: 60px;
+    }
+
+    .types-of-groups {
+        gap: 44px;
+    }
+
+    .karting-groups_elem {
+        padding: 51px 10px;
+    }
+    
+    .karting-groups-elem_title {
+        font-size: 20px;
+    }
+
+    .karting-groups-elem_descript {
+        font-size: 14px;
+    }
+
+    .fare-school {
+        font-size: 12px;
+        padding: 2px 7px;
+        border-width: 0.5px;
+    }
+
+    .price-info_elem p {
+        font-size: 14px;
+    }
+
+    .price-info-school {
+        margin-top: 25px;
+    }
+    
+    .groups-button-callback {
+        font-size: 14px;
+        padding: 2px 10px;
+        margin-top: 25px;
+    }
+
+    /* СТРАНИЦА О КОМПАНИИ */
+    .main-info-block_title {
+        height: 23px;
+    }
+
+    .main-info-block_descript {
+        font-size: 14px;
+    }
+
+    .our-trainers-block_title,
+    .our-track-block_title {
+        font-size: 18px;
+    }
+
+    .trainers-list_elem img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .trainers-name {
+        font-size: 16px;
+    }
+
+    .our-track-list_elem img {
+        max-width: 300px;
+    }
+
+    /* СТРАНИЦА КОНТАКТЫ */
+    .location-info {
+        width: 80vw; height: 13vh;
+        border-radius: 7px;
+        padding: 10px 15px;
+        transform: translateX(15px) translateY(-20vh);
+    }
+
+    .location-info_city {
+        font-size: 12px;
+        padding: 1px 8px;
+    }
+
+    .location-info_address {
+        font-size: 14px;
+    }
+
+    .location-info_chart {
+        font-size: 12px;
+    }
+
+    /* СТРАНИЦА ОШИБКИ */
+    .error-404 {
+        font-size: 24px;
+        margin-top: 70%;
+    }
+
+    .error-404 img {
+        width: 100px;
+    }
+
+    .button-back {
+        font-size: 14px;
+    }
+}

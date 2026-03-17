@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--подключение кастомные шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- подключение основные стили сайта -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Картинг-центр | Профессиональный картинг в г. Пермь</title>
+    <meta name="description" content="Находимся по адресу: ул. Революции, 52. Звонок по номеру +7 (904) 842-11-24">
+</head>
+<body>
+    <header class="header">
+        <div class="container" id="inline-container">
+            <img class="header-menu-elem logo" src="images/logo.svg" width="242" height="39" alt="Логотип компании Формула К">
+
+            <nav class="header-menu">
+                <ul class="navigation">
+                    <li class="header-menu-elem"><a href="index.html">главная</a></li>
+                    <li class="header-menu-elem">
+                            <p>услуги</p>
+                            <ul class="header-submenu">
+                                <li class="header-submenu-elem"><a href="karting-page.html">картинг</a></li>
+                                <li class="header-submenu-elem"><a href="karting-school-page.html">школа</a></li>
+                                <li class="header-submenu-elem"><a href="custom-kart-page.html">сборка</a></li>
+                            </ul>
+                    </li>
+                    <li class="header-menu-elem"><a href="about-us-page.html">о нас</a></li>
+                    <li class="header-menu-elem"><p>контакты</p></li>
+                </ul>
+            </nav>
+
+            <button class="header-menu-elem button-callback modal-open-button" id="header-button-callback" type="button">позвоните мне</button>
+
+            <button class="header-mobile-menu_button" type="button">
+                <img src="images/mobile-menu.png" width="61" height="6" alt="">
+            </button>
+        </div>
+    </header>
+
+    <main class="container-contacts">
+        <div class="container contacts-block">
+            <div class="contacts-block_info">
+                <a class="contacts-block_info-48" href="maito:=info@formulaK.com"><b>info@formulaK.com</b></a>
+                <a class="contacts-block_info-48" href="tel:=89048421124"><b>8 &#40;904&#41; 842&ndash;11&ndash;24</b></a>
+                <a class="contacts-block_info-40" href="" target="blank">vkontakte</a>
+                <a class="contacts-block_info-40" href="" target="blank">telegram</a>
+            </div>
+
+            <div class="contacts-block_map">
+                <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8271ac99c8f9bc4199aed761d983dfef26a6801bcc79f7268f094134fdf95fa9&amp;source=constructor" width="540" height="675" frameborder="0"></iframe>
+
+                <div class="location-info">
+                    <div class="location-info_city"><b>Пермь</b></div>
+                    <p class="location-info_address"><b>ул. Революции, 52</b></p>
+                    <p class="location-info_chart">работаем с 12:00 до 00:00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- модальное окно -->
+    <div class="modal-window modal-window-request">
+        <div class="container" id="modal-window-container">
+            <div class="modal-window-header">
+                <img class="modal-logo" src="images/logo.svg" width="242" height="39" alt="Логотип компании Формула К">
+                <button class="button-close-window" type="button"></button>
+            </div> 
+
+            <div class="invitation-block_title"></div>
+
+            <div class="modal-window__errors"></div>
+
+            <form action="http://formulakarting.ru/verification.php" method="post" class="input-form">
+                <input name="user-name" class="input-form-elem" type="text" placeholder="Имя" autocomplete="off"> 
+                <input name="user-phone" class="input-form-elem phone-number" type="tel" 
+                value="+7 (___)___-__-__" placeholder="+7 (___)___-__-__" autocomplete="off">
+
+                <button class="button-callback request-button" id="modal-button-callback" type="submit"><b>позвоните мне</b></button>
+
+                <p class="invitation-block-footnote">* нажимая кнопку, вы соглашаетесь с правилами<br>обработки персональных данных</p>
+            </form>
+
+            <div class="modal-window__success-message">
+                <div class="modal-window_title"><b>СПАСИБО ЗА ЗАЯВКУ!</b></div>
+                <p class="modal-window_success-text ">скоро мы с вами свяжемся</p>
+            </div>
+
+            <div class="modal-window-contacts">
+                <a href="mailto:=info@formulaK.com">info@formulaK.com</a>
+                <a href="tel:=89048421124">8 &#40;904&#41; 842-11-24</a>
+                <a href="" target="blank">vkontakte</a>
+                <a href="" target="blank">telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- мобильное меню -->
+    <div class="mobile-menu-modal">
+        <div class="modal-backdrop"></div>
+        <div class="mobile-menu">
+            <div class="mobile-header">
+                <img class="modal-logo" src="images/logo.svg" width="95" alt="Логотип компании Формула К">
+                <button class="button-close-window" type="button"></button>
+            </div> 
+            
+            <nav class="mobile">
+                <ul class="mobile-menu_navigation">
+                    <li class="mobile-menu_elem"><a href="index.html">ГЛАВНАЯ</a></li>
+                    <li class="mobile-menu_elem elem_uslugi"><p>УСЛУГИ</p></li>
+                    <li class="mobile-menu_elem"><a href="about-us-page.html">О НАС</a></li>
+                    <li class="mobile-menu_elem"><a href="contacts.html">КОНТАКТЫ</a></li>
+                </ul>
+
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-elem"><a href="karting-page.html">картинг</a></li>
+                    <li class="mobile-submenu-elem"><a href="karting-school-page.html">школа</a></li>
+                    <li class="mobile-submenu-elem"><a href="custom-kart-page.html">сборка</a></li>
+                </ul>
+            </nav>
+            
+            <button class="button-callback modal-open-button mobile-request-button" type="button">
+                <b>позвоните мне</b>
+            </button>
+            
+            <div class="mobile-contacts">
+                <a href="mailto:info@formulaK.com">info@formulaK.com</a>
+                <a href="tel:89048421124">8 (904) 842-11-24</a>
+                <a href="" target="blank">vkontakte</a>
+                <a href="" target="blank">telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!--подключаем скрипты сайта-->
+    <script src = "script/modal-open-close.js" defer></script>
+    <script src = "script/mobile-menu.js" defer></script>
+    <script src = "script/submenu-open.js" defer></script>
+    <script src = "script/send-request.js" defer></script>
+    <script src = "script/phone-number.js" defer></script>
+</body>
+</html>

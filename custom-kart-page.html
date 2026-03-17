@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--подключение кастомные шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- подключение основные стили сайта -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--подключение стилей сторонних библиотек-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <title>Картинг-центр | Профессиональный картинг в г. Пермь</title>
+    <meta name="description" content="Сборка картов - собери кастомный проффесиональный карт по своим параметрам. Звонок по номеру +7 (904) 842-11-24">
+</head>
+<body>
+    <header class="header">
+        <div class="container" id="inline-container">
+            <img class="header-menu-elem logo" src="images/logo.svg" width="242" height="39" alt="Логотип компании Формула К">
+
+            <nav class="header-menu">
+                <ul class="navigation">
+                    <li class="header-menu-elem"><a href="index.html">главная</a></li>
+                    <li class="header-menu-elem">
+                            <p>услуги</p>
+                            <ul class="header-submenu">
+                                <li class="header-submenu-elem"><a href="karting-page.html">картинг</a></li>
+                                <li class="header-submenu-elem"><a href="karting-school-page.html">школа</a></li>
+                                <li class="header-submenu-elem"><p>сборка</p></li>
+                            </ul>
+                    </li>
+                    <li class="header-menu-elem"><a href="about-us-page.html">о нас</a></li>
+                    <li class="header-menu-elem"><a href="contacts.html">контакты</a></li>
+                </ul>
+            </nav>
+
+            <button class="header-menu-elem button-callback modal-open-button" id="header-button-callback" type="button">позвоните мне</button>
+
+            <button class="header-mobile-menu_button" type="button">
+                <img src="images/mobile-menu.png" width="61" height="6" alt="">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="custom-kart-imfo-block container">
+            <p class="bread-crumb">Услуги / Сборка картов под заказ</p>
+
+            <div class="custom-kart-info-block_title"></div>
+
+            <p class="custom-kart-info-block_descript">Сборка картов &ndash; это индивидуальный процесс<br>Итоговая стоимость карта будет зависеть от желаемой комплектации и харакеристик<br><br>Чтобы обсудить все детали и сделать индивидуальный расчет, нажмите <a class="button-callback link-callback modal-open-button"><b>сюда</b></a> и мы обязательно с вами свяжемся
+            </p>
+
+            <p class="custom-kart-calculator_descript">Для того, чтобы посчитать приблизительную стоимость, воспользуйтесь нашим конфигуратором:</p>
+        </div>
+
+        <!--калькулятор-свайпер, позволяющий посчитать стоимость карта-->
+        <div class="swiper custom-kart-calculator container">
+            <div class="swiper-wrapper">
+                <!--первый слайд калькулятора: двигатель-->
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/kart-engine.png" alt="Выбор двигателя в карте">
+        
+                    <div class="calculator-block-elem_info">
+                        <p class="pagination_description">1/5: двигатель</p>
+        
+                        <div class="pagination">
+                            <div class="pagination-elem_active"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div>
+                        </div>
+        
+                        <p class="calculator-block-elem_title"><b>ДВИГАТЕЛЬ</b></p>
+        
+                        <div class="calculator-block-elem_options">
+                            <input class="custom-radio-button" id="radio-1" type="radio" name="radio-button" value="1">
+                            <label class="custom-radio-card item_non-standart-18" for="radio-1">7 л.с.<br><br>максимальная скорость &ndash; 35 км/ч<br>разгон с 0 до 100 км/ч &ndash; 15-17 сек.</label>
+        
+                            <input class="custom-radio-button" id="radio-2" type="radio" name="radio-button" value="2">
+                            <label class="custom-radio-card item_non-standart-18" for="radio-2">25 л.с.<br><br>максимальная скорость &ndash; 120 км/ч<br>разгон с 0 до 100 км/ч &ndash; 5-7 сек.</label>
+        
+                            <input class="custom-radio-button" id="radio-3" type="radio" name="radio-button" value="3">
+                            <label class="custom-radio-card item_non-standart-18" for="radio-3">40 л.с.<br><br>максимальная скорость &ndash; 150 км/ч<br>разгон с 0 до 100 км/ч &ndash; 3-4 сек.</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--второй слайд калькулятора: подвеска-->
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/kart-bracket.png" alt="Выбор подвески в карте">
+        
+                    <div class="calculator-block-elem_info">
+                        <p class="pagination_description">2/5: подвеска</p>
+        
+                        <div class="pagination">
+                            <div class="pagination-elem"></div><div class="pagination-elem_active"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div>
+                        </div>
+        
+                        <p class="calculator-block-elem_title"><b>ПОДВЕСКА</b></p>
+        
+                        <div class="calculator-block-elem_options">
+                            <input class="custom-radio-button" id="radio-4" type="radio" name="radio-button" value="4">
+                            <label class="custom-radio-card item_non-standart-16" for="radio-4">жесткая<br><br>обеспечивает минимальное движение кузова, что улучшает управляемость</label>
+        
+                            <input class="custom-radio-button" id="radio-5" type="radio" name="radio-button" value="5">
+                            <label class="custom-radio-card item_non-standart-16" for="radio-5">мягкая<br><br>поглощает больше неровностей трассы, делая езду более комфортной</label>
+        
+                            <input class="custom-radio-button" id="radio-6" type="radio" name="radio-button" value="6">
+                            <label class="custom-radio-card item_non-standart-16" for="radio-6">активная<br><br>автоматическая регулировка амортизаторов в зависимости от условий езды</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--третий слайд калькулятора: трансмиссия-->
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/kart-transmission.png" alt="Выбор трансмиссии в карте">
+        
+                    <div class="calculator-block-elem_info">
+                        <p class="pagination_description">3/5: трансмиссия</p>
+        
+                        <div class="pagination">
+                            <div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem_active"></div><div class="pagination-elem"></div><div class="pagination-elem"></div>
+                        </div>
+        
+                        <p class="calculator-block-elem_title"><b>ТРАНСМИССИЯ</b></p>
+        
+                        <div class="calculator-block-elem_options">
+                            <input class="custom-radio-button" id="radio-7" type="radio" name="radio-button" value="7">
+                            <label class="custom-radio-card" for="radio-7">цепной привод<br><br>простая и надежная система, которая обеспечивает высокую эффективность передачи мощности</label>
+        
+                            <input class="custom-radio-button" id="radio-8" type="radio" name="radio-button" value="8">
+                            <label class="custom-radio-card" for="radio-8">ременной привод<br><br>менее шумный по сравнению с цепным и требует меньше технического обслуживания, однако менее эффективен</label>
+        
+                            <input class="custom-radio-button" id="radio-9" type="radio" name="radio-button" value="9">
+                            <label class="custom-radio-card" for="radio-9">гидротрансформатор<br><br>позволяет плавно и эффективно передавать мощность от двигателя к колесам</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--четвертый слайд калькулятора: диски-->
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/kart-rims.png" alt="Выбор дисков в карте">
+        
+                    <div class="calculator-block-elem_info">
+                        <p class="pagination_description">4/5: диски</p>
+        
+                        <div class="pagination">
+                            <div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem_active"></div><div class="pagination-elem"></div>
+                        </div>
+        
+                        <p class="calculator-block-elem_title"><b>ДИСКИ</b></p>
+        
+                        <div class="calculator-block-elem_options">
+                            <input class="custom-radio-button" id="radio-10" type="radio" name="radio-button" value="10">
+                            <label class="custom-radio-card" for="radio-10">литые<br><br>изготавливаются методом литья под давлением, что позволяет получить сложные формы и высокую прочность</label>
+        
+                            <input class="custom-radio-button" id="radio-11" type="radio" name="radio-button" value="11">
+                            <label class="custom-radio-card" for="radio-11">кованные<br><br>производятся путем горячей штамповки, что делает их очень прочными и легкими</label>
+        
+                            <input class="custom-radio-button" id="radio-12" type="radio" name="radio-button" value="12">
+                            <label class="custom-radio-card" for="radio-12">композитные<br><br>могут быть изготовлены из углеродного волокна или других композитных материалов, очень легкие и прочные</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--пятый слайд калькулятора: резина-->
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/kart-tyre.png" alt="Выбор резины в карте">
+        
+                    <div class="calculator-block-elem_info">
+                        <p class="pagination_description">5/5: резина</p>
+        
+                        <div class="pagination">
+                            <div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem"></div><div class="pagination-elem_active"></div>
+                        </div>
+        
+                        <p class="calculator-block-elem_title"><b>РЕЗИНА</b></p>
+        
+                        <div class="calculator-block-elem_options">
+                            <input class="custom-radio-button" id="radio-13" type="radio" name="radio-button" value="13">
+                            <label class="custom-radio-card" for="radio-13">слик-резина<br><br>имеют гладкую поверхность без протектора, обеспечивают максимальное сцепление с дорогой в сухую погоду</label>
+        
+                            <input class="custom-radio-button" id="radio-14" type="radio" name="radio-button" value="14">
+                            <label class="custom-radio-card" for="radio-14">интромедиат-резина<br><br>имеют небольшое количество канавок или мелкий протектор, обеспечивают хорошее сцепление на мокрых трассах</label>
+        
+                            <input class="custom-radio-button" id="radio-15" type="radio" name="radio-button" value="15">
+                            <label class="custom-radio-card" for="radio-15">рейсинговые дождевые шины<br><br>имеют глубокий протектор с широкими каналами для отвода воды, обеспечивают лучшее сцепление на мокрых трассах</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--шестой слайд калькулятора: итоговая цена-->     
+                <div class="calculator-block_elem swiper-slide">
+                    <img class="calculator-block-elem_img" src="images/finished-kart.png" alt="Итоговый кастомный карт"> 
+        
+                    <div class="calculator-block-elem_info">
+                        <button class="clоse-finished-slide" type="button"></button>
+
+                        <p class="finished-kart_title"><b>ИТОГОВЫЙ КАРТ:</b></p>
+        
+                        <div class="finished-kart_info"></div>
+        
+                        <div class="finished-kart_price"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-button-prev button-arrow"></div>
+            <div class="swiper-button-next button-arrow"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container" id="footer-container">
+            <div class="footer-politics">
+                <p  class="footer-politics-elem" id="politics-privacy">Политика конфиденциальности и защита персональных данных</p>
+                <p class="footer-politics-elem" id="politics-cookie">Политика использования файлов куки</p>
+                <p class="footer-politics-elem" id="politics-copyright">&copy; 2024 Formula K. Все права защищены</p>
+            </div>
+
+            <div class="footer-contacts">
+                <a class="footer-contacts-elem" id="contacts-number" href="tel:=89048421124">8 &#40;904&#41; 842-11-24</a>
+                <a class="footer-contacts-elem" id="contacts-vk" href="" target="blank">vkontakte</a>
+                <a class="footer-contacts-elem" id="contacts-tg" href="" target="blank">telegram</a>
+            </div>
+        </div>
+
+        <div class="footer-picture"></div>
+    </footer>
+
+    <!-- модальное окно -->
+    <div class="modal-window modal-window-request">
+        <div class="container" id="modal-window-container">
+            <div class="modal-window-header">
+                <img class="modal-logo" src="images/logo.svg" width="242" height="39" alt="Логотип компании Формула К">
+                <button class="button-close-window" type="button"></button>
+            </div> 
+
+            <div class="invitation-block_title"></div>
+
+            <div class="modal-window__errors"></div>
+
+            <form action="http://formulakarting.ru/verification.php" method="post" class="input-form">
+                <input name="user-name" class="input-form-elem" type="text" placeholder="Имя" autocomplete="off"> 
+                <input name="user-phone" class="input-form-elem phone-number" type="tel" 
+                value="+7 (___)___-__-__" placeholder="+7 (___)___-__-__" autocomplete="off">
+
+                <button class="button-callback request-button" id="modal-button-callback" type="submit"><b>позвоните мне</b></button>
+
+                <p class="invitation-block-footnote">* нажимая кнопку, вы соглашаетесь с правилами<br>обработки персональных данных</p>
+            </form>
+
+            <div class="modal-window__success-message">
+                <div class="modal-window_title"><b>СПАСИБО ЗА ЗАЯВКУ!</b></div>
+                <p class="modal-window_success-text ">скоро мы с вами свяжемся</p>
+            </div>
+
+            <div class="modal-window-contacts">
+                <a href="mailto:=info@formulaK.com">info@formulaK.com</a>
+                <a href="tel:=89048421124">8 &#40;904&#41; 842-11-24</a>
+                <a href="" target="blank">vkontakte</a>
+                <a href="" target="blank">telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- мобильное меню -->
+    <div class="mobile-menu-modal">
+        <div class="modal-backdrop"></div>
+        <div class="mobile-menu">
+            <div class="mobile-header">
+                <img class="modal-logo" src="images/logo.svg" width="95" alt="Логотип компании Формула К">
+                <button class="button-close-window" type="button"></button>
+            </div> 
+            
+            <nav class="mobile">
+                <ul class="mobile-menu_navigation">
+                    <li class="mobile-menu_elem"><a href="index.html">ГЛАВНАЯ</a></li>
+                    <li class="mobile-menu_elem elem_uslugi"><p>УСЛУГИ</p></li>
+                    <li class="mobile-menu_elem"><a href="about-us-page.html">О НАС</a></li>
+                    <li class="mobile-menu_elem"><a href="contacts.html">КОНТАКТЫ</a></li>
+                </ul>
+
+                <ul class="mobile-submenu">
+                    <li class="mobile-submenu-elem"><a href="karting-page.html">картинг</a></li>
+                    <li class="mobile-submenu-elem"><a href="karting-school-page.html">школа</a></li>
+                    <li class="mobile-submenu-elem"><a href="custom-kart-page.html">сборка</a></li>
+                </ul>
+            </nav>
+            
+            <button class="button-callback modal-open-button mobile-request-button" type="button">
+                <b>позвоните мне</b>
+            </button>
+            
+            <div class="mobile-contacts">
+                <a href="mailto:info@formulaK.com">info@formulaK.com</a>
+                <a href="tel:89048421124">8 (904) 842-11-24</a>
+                <a href="" target="blank">vkontakte</a>
+                <a href="" target="blank">telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <!--подключаем скрипты сторонних библиотек-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--подключаем скрипты сайта-->
+    <script src = "script/modal-open-close.js" defer></script>
+    <script src = "script/mobile-menu.js" defer></script>
+    <script src = "script/submenu-open.js" defer></script>
+    <script src = "script/phone-number.js" defer></script>
+    <script src = "script/send-request.js" defer></script>
+    <script src = "script/swiper-calculator.js" defer></script>
+</body>
+</html>
